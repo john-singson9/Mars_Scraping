@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mars Scraping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Gather New Data</a></p>
+            <p><a class=""></a></p>
+        </div>
+
+        <div class="row" id="mars-scraping-news">
+            <div class="col-md-12">
+                <h2 class="heading">Latest Mars News</h2>
+                <h4>{{mars.latest_news}}</h4>
+                <p>{{mars.snippet}}</p>
+            </div>
+        </div>
+
+        <div class="row" id="mars-image">
+            <div class="col-md-8">
+                <h2>Featured Mars Image</h2>
+                <img class="img" src="{{mars.image}}" alt="Mars Featured Image">
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h3>Current Mars Weather</h3>
+                    {{mars.weather}}
+                </div>
+                <div class="box">
+                    <h3>Mars Data</h3>
+                    <p>
+                        {{mars.table | safe}}
+                    </p>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+</body>
+</html>
