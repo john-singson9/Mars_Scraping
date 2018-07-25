@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,6 +42,18 @@
                 </div>
             </div>
         </div> 
+
+        <div class="row" id="mars-hemispheres">
+            <h3>Mars Hemispheres</h3>
+                {% for hemisphere in mars.hemispheres %}
+                        <div class="col-md-6">
+                            <h4>{{hemisphere.title}}</h4>
+                            <img class="img" src="{{hemisphere.img_url}}" width=100%>
+                        </div>
+                {% endfor %}
+            </div>
+
+        </div>
 
     </div>
 </body>

@@ -88,13 +88,13 @@ def scrape():
         except:
             print("This data is not added to the dictionary.  Title and link does not exist")
 
-    #Check Outputs
-    # print(news_title)
-    # print(news_p)
-    # print(featured_image_url)
-    # print(mars_weather)
-    # print(mars_table)
-    # print(hemisphere_image_urls)  
+    # Check Outputs
+    print(news_title)
+    print(news_p)
+    print(featured_image_url)
+    print(mars_weather)
+    print(mars_table)
+    print(hemisphere_image_urls)  
 
     #Append the final data
     final_data["latest_news"] = news_title
@@ -102,8 +102,10 @@ def scrape():
     final_data["image"] = featured_image_url
     final_data["weather"] = mars_weather
     final_data["table"] = mars_table
-    final_data["hemispheres_image_urls"] = hemisphere_image_urls
+    final_data["hemispheres"] = hemisphere_image_urls
 
     browser.quit()
 
     return final_data
+
+scrape()
